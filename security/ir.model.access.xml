@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
     <!-- PERMISOS PARA EL ADMIN POR DEFECTO -->
@@ -30,6 +29,51 @@
         <field name="perm_create" eval="1"/>
         <field name="perm_write" eval="1"/>
         <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_access_student_subject" model="ir.model.access">
+        <field name="name">model.access.student.subject</field>
+        <field name="model_id" ref="modulo_escuela.model_school_student_subject"/>    
+        <field name="group_id" ref="base.group_system"/> 
+        <field name="perm_read" eval="1"/> 
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <!-- PERMISOS PARA EL USUARIO SIMPLE -->
+    <record id="model_access_student_user_simple" model="ir.model.access">
+        <field name="name">model.access.student.user.simple</field>
+        <field name="model_id" ref="modulo_escuela.model_school_student"/> 
+        <field name="group_id" ref="modulo_escuela.res_groups_user_simple"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_access_student_subject_user_simple" model="ir.model.access">
+        <field name="name">model.access.student.subject.user.simple</field>
+        <field name="model_id" ref="modulo_escuela.model_school_student_subject"/>    
+        <field name="group_id" ref="modulo_escuela.res_groups_user_simple"/> 
+        <field name="perm_read" eval="1"/> 
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <record id="model_access_teacher_user_simple" model="ir.model.access">
+        <field name="name">model.access.teacher.user.simple</field>
+        <field name="model_id" ref="modulo_escuela.model_school_teacher"/>    
+        <field name="group_id" ref="modulo_escuela.res_groups_user_simple"/> 
+        <field name="perm_read" eval="1"/> 
+    </record>
+
+    <record id="model_access_subject_user_simple" model="ir.model.access">
+        <field name="name">model.access.subject.user.simple</field>
+        <field name="model_id" ref="modulo_escuela.model_school_subject"/> 
+        <field name="group_id" ref="modulo_escuela.res_groups_user_simple"/>
+        <field name="perm_read" eval="1"/> 
     </record>
 
 </odoo>

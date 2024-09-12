@@ -1,0 +1,12 @@
+<odoo>
+
+    <record id="module_modulo_escuela" model="ir.module.category">
+        <field name="name">Módulo Escuela</field>
+    </record>
+
+    <record id="res_groups_user_simple" model="res.groups">
+        <field name="name">Usuario Simple</field>
+        <field name="category_id" ref="modulo_escuela.module_modulo_escuela"/>
+    </record>
+
+</odoo>

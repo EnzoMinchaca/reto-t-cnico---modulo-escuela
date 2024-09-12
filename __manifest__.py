@@ -6,6 +6,7 @@
     "depends": ["base"],
     "data": [
         "security/ir.model.access.xml",
+        "security/res_groups.xml",
         "views/views.xml"
     ]
 }
