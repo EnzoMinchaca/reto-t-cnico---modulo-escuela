@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- ADMIN -->
+    <record id="model_access_student" model="ir.model.access">
+        <field name="name">model.access.student</field>
+        <field name="model_id" ref="modulo_escuela.model_school_student"/>    <!--nombreModulo.model_nombreModeloConPuntosEnGuiobajo-->
+        <field name="group_id" ref="base.group_system"/> <!--Relacionamos con grupo existente con su identificador externo Administracion/Ajustes-->
+        <field name="perm_read" eval="1"/>  <!--eval xq son valores booleanos lo que va a tener con un checkbox-->
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <!-- ADMIN -->
+    <record id="model_access_subject" model="ir.model.access">
+        <field name="name">model.access.subject</field>
+        <field name="model_id" ref="modulo_escuela.model_school_subject"/> 
+        <field name="group_id" ref="base.group_system"/>
+        <field name="perm_read" eval="1"/> 
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+    <!-- ADMIN -->
+    <record id="model_access_teacher" model="ir.model.access">
+        <field name="name">model.access.teacher</field>
+        <field name="model_id" ref="modulo_escuela.model_school_teacher"/>    
+        <field name="group_id" ref="base.group_system"/> 
+        <field name="perm_read" eval="1"/> 
+        <field name="perm_create" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+
+</odoo>

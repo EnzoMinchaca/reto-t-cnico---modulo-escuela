@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--Formulario Estudiante-->
+    <record id="view_form_school_student" model="ir.ui.view">
+        <field name="name">view.form.school.student</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" required="1"/>
+                        <field name="birth_date"/>
+                        <field name="age"/>
+                        <field name="final_exam_grade"/>
+                        <field name="subject_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--Lista de Estudiantes-->
+    <record id="view_tree_school_student" model="ir.ui.view">
+        <field name="name">view.tree.school.student</field>
+        <field name="model">school.student</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="birth_date"/>
+                <field name="age"/>
+                <field name="final_exam_grade"/>
+                <field name="subject_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--Formulario Asignatura-->
+    <record id="view_form_school_subject" model="ir.ui.view">
+        <field name="name">view.form.school.subject</field>
+        <field name="model">school.subject</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" required="1"/>
+                        <field name="credits"/>
+                        <field name="max_students"/>
+                        <field name="active"/>
+                        <field name="student_ids"/>
+                        <field name="teacher_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--Lista de Asignatura-->
+    <record id="view_tree_school_subject" model="ir.ui.view">
+        <field name="name">view.tree.school.subject</field>
+        <field name="model">school.subject</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="credits"/>
+                <field name="max_students"/>
+                <field name="active"/>
+                <field name="student_ids"/>
+                <field name="teacher_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--Formulario Profesor-->
+    <record id="view_form_school_teacher" model="ir.ui.view">
+        <field name="name">view.form.school.teacher</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" required="1"/>
+                        <field name="profile"/>
+                        <field name="subject_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!--Lista de Profesor-->
+    <record id="view_tree_school_teacher" model="ir.ui.view">
+        <field name="name">view.tree.school.teacher</field>
+        <field name="model">school.teacher</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="profile"/>
+                <field name="subject_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <!--Acciones de Ventana-->
+    <record id="action_view_student" model="ir.actions.act_window">
+        <field name="name">Estudiante</field>
+        <field name="res_model">school.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_view_subject" model="ir.actions.act_window">
+        <field name="name">Asignatura</field>
+        <field name="res_model">school.subject</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_view_teacher" model="ir.actions.act_window">
+        <field name="name">Profesor</field>
+        <field name="res_model">school.teacher</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!--Menus-->
+    <menuitem id="school_menu" name="Módulo Escuela"/>
+    <menuitem id="school_menu_student" name="Estudiantes" parent="school_menu" action="action_view_student"/>
+    <menuitem id="school_menu_subject" name="Asignaturas" parent="school_menu" action="action_view_subject"/>
+    <menuitem id="school_menu_teacher" name="Profesores" parent="school_menu" action="action_view_teacher"/>
+
+</odoo>
