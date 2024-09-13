@@ -1,6 +1,6 @@
 Reto técnico de Odoo
 
-Pasos para la ejecución y correcto funcionamiento del módulo:\n
+Pasos para la ejecución y correcto funcionamiento del módulo:\\
 1- Descargar el archivo del módulo
 2- Agregar el módulo dentro de la ubicación de addons declarada en el addons_path de su odoo local
 3- Una vez agregado dentro de los addons, se debe de actualizar las aplicaciones en la interfaz de odoo
