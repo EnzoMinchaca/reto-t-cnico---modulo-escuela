@@ -8,7 +8,7 @@ class Student(models.Model):
     birth_date = fields.Date("Fecha de Nacimiento", required=True)
     age = fields.Integer("Edad", readonly=True, compute="_compute_age", store=True)
     student_subject_ids = fields.One2many("school.student_subject", "student_id", string="Asignaturas")
-    #subject_ids = fields.Many2many('school.subject', string='Subjects')
+    #subject_ids = fields.Many2many('school.subject', string='Asignaturas')
     average_grade = fields.Float("Promedio de Notas", compute="_compute_average_grade")
     
     #Funcion para calcular la edad en base a la fecha de nacimiento declarada
