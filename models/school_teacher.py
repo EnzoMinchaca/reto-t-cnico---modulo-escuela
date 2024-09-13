@@ -1,4 +1,4 @@
-from odoo import fields, models, api
+from odoo import fields, models
 
 class Teacher(models.Model):
     _name = "school.teacher"
