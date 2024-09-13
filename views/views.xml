@@ -10,9 +10,11 @@
                         <field name="name" required="1"/>
                         <field name="birth_date"/>
                         <field name="age"/>
+                        <field name="average_grade"/>
                         <field name="student_subject_ids">
                             <tree editable="bottom">
                                 <field name="subject_id"/>
+                                <field name="credits"/>
                                 <field name="teacher_id"/>
                                 <field name="final_exam_grade"/>
                             </tree>
@@ -32,6 +34,7 @@
                 <field name="name"/>
                 <field name="birth_date"/>
                 <field name="age"/>
+                <field name="average_grade"/>
                 <field name="student_subject_ids"/>
             </tree>
         </field>
@@ -48,6 +51,7 @@
                         <field name="name" required="1"/>
                         <field name="credits"/>
                         <field name="max_students"/>
+                        <field name="enrolled_students"/>
                         <field name="active"/>
                         <field name="student_subject_ids">
                             <tree editable="bottom">
@@ -71,6 +75,7 @@
                 <field name="name"/>
                 <field name="credits"/>
                 <field name="max_students"/>
+                <field name="enrolled_students"/>
                 <field name="active"/>
                 <field name="student_subject_ids"/>
                 <field name="teacher_id"/>
